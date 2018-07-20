@@ -26,7 +26,8 @@
  * ------------------------------------------------------------------------------
  */
 
-import appConfig from '../../../public/config.json'
+// import appConfig from '../../../public/config.json'
+const appConfig = {}
 
 /**
  * Handle change input value

@@ -36,9 +36,11 @@ import {
 } from 'react-router-dom'
 import I18n from '../../../shared/i18n'
 import publicURL from '../../../shared/publicURL'
-import appConfig from '../../../../public/config.json'
+// import appConfig from '../../../../public/config.json'
 import withGLPI from '../../../hoc/withGLPI'
 import Loading from '../../../components/Loading'
+
+const appConfig = {}
 
 /**
  * Component with the step 1 (the user name) of the login
@@ -107,29 +109,27 @@ class UsernameFieldset extends PureComponent {
     if (this.props.username) {
       this.props.changePhase(2)
     } else {
-      this.setState((prevState) => {
-        ({
-          classInput: 'win-textbox color-line-alert',
-          errorMessage: (
-            <p className="color-type-alert">
-              <span>
-                {' '}
-                {I18n.t('login.username_not_registered')}
-                {' '}
-              </span>
-              {
-                prevState.selfRegistration
-                  ? (
-                    <Link to={`${publicURL}/signUp`}>
-                      {I18n.t('login.create_a_new')}
-                    </Link>
-                  )
-                  : null
-              }
-            </p>
-          ),
-        })
-      })
+      this.setState((prevState) => ({
+        classInput: 'win-textbox color-line-alert',
+        errorMessage: (
+          <p className="color-type-alert">
+            <span>
+              {' '}
+              {I18n.t('login.username_not_registered')}
+              {' '}
+            </span>
+            {
+              prevState.selfRegistration
+                ? (
+                  <Link to={`${publicURL}/signUp`}>
+                    {I18n.t('login.create_a_new')}
+                  </Link>
+                )
+                : null
+            }
+          </p>
+        ),
+      }))
     }
   }
 

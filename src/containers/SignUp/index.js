@@ -41,7 +41,8 @@ import withAuthenticationLayout from '../../hoc/withAuthenticationLayout'
 import withHandleMessages from '../../hoc/withHandleMessages'
 import publicURL from '../../shared/publicURL'
 import ErrorValidation from '../../components/ErrorValidation'
-import appConfig from '../../../public/config.json'
+// import appConfig from '../../../public/config.json'
+const appConfig = {}
 
 /**
  * Component with the registration form

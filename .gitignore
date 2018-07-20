@@ -28,3 +28,6 @@ yarn-debug.log*
 yarn-error.log*
 
 src/shared/i18n/translations
+
+.sass-cache
+src/assets/styles/css

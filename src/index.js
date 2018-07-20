@@ -42,8 +42,12 @@ import {
 import { I18nProvider } from './providers/I18nProvider'
 import { NotificationsProvider } from './providers/NotificationsProvider'
 import { AuthenticationProvider } from './providers/AuthenticationProvider'
-import './assets/styles/main.scss' // Global CSS Styles
-import appConfig from '../public/config.json'
+import './assets/styles/css/main.css' // Global CSS Styles
+import 'web-animations-js/web-animations-next-lite.min.js'
+// import appConfig from '../public/config.json'
+const appConfig = {
+  bugsnag: "1234",
+}
 
 /**
  * Create the bugsnag client
